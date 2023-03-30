@@ -1,9 +1,8 @@
-package com.madadipouya.elasticsearch.springdata.example.service.impl;
+package com.elasticsearch.park.service.impl;
 
-import com.madadipouya.elasticsearch.springdata.example.model.LocationData;
-import com.madadipouya.elasticsearch.springdata.example.model.Park;
-import com.madadipouya.elasticsearch.springdata.example.repository.ParkRepository;
-import com.madadipouya.elasticsearch.springdata.example.service.ParkService;
+import com.elasticsearch.park.model.Park;
+import com.elasticsearch.park.repository.ParkRepository;
+import com.elasticsearch.park.service.ParkService;
 import org.elasticsearch.common.geo.GeoDistance;
 import org.elasticsearch.common.unit.DistanceUnit;
 import org.elasticsearch.index.query.GeoDistanceQueryBuilder;
@@ -26,7 +25,7 @@ import static org.elasticsearch.index.query.QueryBuilders.matchAllQuery;
 @Service
 public class ParkServiceImpl implements ParkService {
 
-    String csvFile = "/Users/dcvijovic/Desktop/AirTerra-doc/Spring-Data-ElasticSearch-Example/src/main/resources/LA parking lot.csv";
+    String csvFile = "/dcvijovic/Desktop/AirTerra-doc/Spring-Data-ElasticSearch-Example/src/main/resources/LA parking lot.csv";
     String line;
     String csvSplitBy = ",";
     char quote = '\"';

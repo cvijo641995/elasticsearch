@@ -1,4 +1,4 @@
-package com.madadipouya.elasticsearch.springdata.example.config;
+package com.elasticsearch.park.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

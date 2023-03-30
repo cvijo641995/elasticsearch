@@ -1,4 +1,4 @@
-package com.madadipouya.elasticsearch.springdata.example;
+package com.elasticsearch.park;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,14 +1,9 @@
-package com.madadipouya.elasticsearch.springdata.example.controller;
+package com.elasticsearch.park.controller;
 
-import com.madadipouya.elasticsearch.springdata.example.model.LocationData;
-import com.madadipouya.elasticsearch.springdata.example.model.Park;
-import com.madadipouya.elasticsearch.springdata.example.service.ParkService;
-import lombok.Data;
-import org.springframework.data.elasticsearch.core.geo.GeoPoint;
+import com.elasticsearch.park.service.ParkService;
+import com.elasticsearch.park.model.Park;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/v1/parks")

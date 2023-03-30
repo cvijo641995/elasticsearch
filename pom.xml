@@ -8,11 +8,11 @@
 		<version>2.1.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.madadipouya.elasticsearch.springdata.example</groupId>
+	<groupId>com.elasticsearch.park</groupId>
 	<artifactId>elasticsearch-springdata</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Elasticsearch SpringData</name>
-	<description>Elasticsearch SpringData</description>
+	<name>Elasticsearch Springboot Park</name>
+	<description>Elasticsearch Springboot Park</description>
 
 	<properties>
 		<java.version>11</java.version>

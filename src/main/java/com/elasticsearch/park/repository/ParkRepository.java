@@ -1,6 +1,6 @@
-package com.madadipouya.elasticsearch.springdata.example.repository;
+package com.elasticsearch.park.repository;
 
-import com.madadipouya.elasticsearch.springdata.example.model.Park;
+import com.elasticsearch.park.model.Park;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 

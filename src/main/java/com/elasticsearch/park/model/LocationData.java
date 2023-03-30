@@ -1,4 +1,4 @@
-package com.madadipouya.elasticsearch.springdata.example.model;
+package com.elasticsearch.park.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

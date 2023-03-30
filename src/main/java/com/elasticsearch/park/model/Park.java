@@ -1,4 +1,4 @@
-package com.madadipouya.elasticsearch.springdata.example.model;
+package com.elasticsearch.park.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
