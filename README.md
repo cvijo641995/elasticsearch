@@ -8,6 +8,8 @@ For this application, a Park controller created allows to do the following opera
 - Find nearest parking from given coordinates
 - How many parkings we have in 1km radius
 
+For implementing this project I was using Elasticsearch database, SpringBoot framework, IntelliJ IDEA and Java 11.
+
 ## How to run
 
 The first thing to do is to start Elasticsearch. For that you can use the `docker-compose` file in this project
