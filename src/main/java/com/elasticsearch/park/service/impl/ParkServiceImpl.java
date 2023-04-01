@@ -18,6 +18,9 @@ import org.springframework.stereotype.Service;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Paths;
 import java.util.List;
 
 import static org.elasticsearch.index.query.QueryBuilders.matchAllQuery;
@@ -25,7 +28,7 @@ import static org.elasticsearch.index.query.QueryBuilders.matchAllQuery;
 @Service
 public class ParkServiceImpl implements ParkService {
 
-    String csvFile = "/dcvijovic/Desktop/AirTerra-doc/Spring-Data-ElasticSearch-Example/src/main/resources/LA parking lot.csv";
+    URL res = getClass().getClassLoader().getResource("LA parking lot.csv");
     String line;
     String csvSplitBy = ",";
     char quote = '\"';
@@ -41,7 +44,7 @@ public class ParkServiceImpl implements ParkService {
     @Override
     public void load(){
         try {
-            BufferedReader br = new BufferedReader(new FileReader(csvFile));
+            BufferedReader br = new BufferedReader(new FileReader(Paths.get(res.toURI()).toFile()));
             line = br.readLine();
             while ((line = br.readLine()) != null) {
                 String[] data = line.split(csvSplitBy + "(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
@@ -61,6 +64,8 @@ public class ParkServiceImpl implements ParkService {
 
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
         }
     }
 
