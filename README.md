@@ -21,11 +21,7 @@ $ docker-compose -f docker-compose up -d
 
 It brings Elasticsearch up.
 
-Then you can run the application like below:
-
-```bash
-$ ./mvnw spring-boot:run
-```
+Then you should be able to run your application from IDEA.
 
 If your Elasticsearch URI is not `localhost` and/or the cluster name is different simply override one or both of the following environment variable:
 
