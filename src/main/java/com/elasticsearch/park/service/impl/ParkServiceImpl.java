@@ -49,7 +49,6 @@ public class ParkServiceImpl implements ParkService {
             while ((line = br.readLine()) != null) {
                 String[] data = line.split(csvSplitBy + "(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
                 for (int i = 0; i < data.length; i++) {
-                    // Remove any surrounding quotes from the data
                     if (data[i].startsWith(String.valueOf(quote)) && data[i].endsWith(String.valueOf(quote))) {
                         data[i] = data[i].substring(1, data[i].length() - 1);
                     }
@@ -58,7 +57,6 @@ public class ParkServiceImpl implements ParkService {
                 park.setLocation(new GeoPoint(Double.parseDouble(data[0]), Double.parseDouble(data[1])));
                 park.setName(data[2]);
                 park.setYear(Integer.parseInt(data[3]));
-                // Do something with the data, e.g. print it to console
                 parkRepository.save(park);
             }
 
